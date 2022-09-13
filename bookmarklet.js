@@ -30,10 +30,11 @@ function getDropName(){
 }
 
 function getDropDate(){
-    let fieldName = 'Auction starts';
+    let auctionField = 'Auction starts';
+    let mintingField = 'Minting opens';
     let match = null;
     for (let element of document.querySelectorAll('strong')) {
-        if (element.textContent.includes(fieldName)) {
+        if (element.textContent.includes(auctionField) || element.textContent.includes(mintingField)) {
             match = element;
             break;
         }
