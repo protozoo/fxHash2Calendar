@@ -10,7 +10,7 @@ function fxhashToCalendar(){
     window.open(
         encodeURI(calendarURL),
         'addwindow',
-        'status=no,toolbar=no,width=520,height=470,resizable=yes'
+        'status=no,toolbar=no,width=620,height=470,resizable=yes'
     )
 }
 
@@ -57,7 +57,7 @@ function getDropDate(){
     if( match ){
         let dateStr = match.nextSibling.textContent;
         let dateParts = dateStr.split(", ").join(" ").split(" ");
-        let date = dateParts[2] + months[ dateParts[0] ] + dateParts[1];
+        let date = dateParts[2] + months[ dateParts[0] ] + (dateParts[1].length==1?"0":"") + dateParts[1];
         let time = dateParts[4].split(":").join("");
         let dateTime = date + "T" + time;
         console.log( dateTime);
