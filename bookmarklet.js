@@ -10,7 +10,7 @@ function fxhashToCalendar(){
     window.open(
         encodeURI(calendarURL),
         'addwindow',
-        'status=no,toolbar=no,width=620,height=470,resizable=yes'
+        'status=no,toolbar=no,width=700,height=470,resizable=yes'
     )
 }
 
