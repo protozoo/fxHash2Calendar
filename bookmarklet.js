@@ -59,7 +59,7 @@ function getDropDate(){
         let dateParts = dateStr.split(", ").join(" ").split(" ");
         let date = dateParts[2] + months[ dateParts[0] ] + (dateParts[1].length==1?"0":"") + dateParts[1];
         let time = dateParts[4].split(":").join("");
-        let dateTime = date + "T" + time;
+        let dateTime = date + "T" + time + "00"; // Need to add seconds, otherwise it offsets time +5mins
         console.log( dateTime);
         return dateTime
     }
